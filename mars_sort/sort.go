@@ -40,3 +40,22 @@ func InsertionSort(array []int)  {
 		array[j+1] = value
 	}
 }
+
+// SelectionSort 选择排序算法
+func SelectionSort(array []int) {
+	arrayLen := len(array)
+	if arrayLen <= 1 {
+		return
+	}
+	for i := 0; i < arrayLen; i++ {
+		min := i
+		for j := i+1; j < arrayLen; j++ {
+			if array[j] < array[min] {
+				min = j
+			}
+		}
+		if i != min {
+			array[i], array[min] = array[min], array[i]
+		}
+	}
+}

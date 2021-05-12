@@ -16,3 +16,9 @@ func TestInsertionSort(t *testing.T) {
 	InsertionSort(array)
 	fmt.Println(array)
 }
+
+func TestSelectionSort(t *testing.T) {
+	array := []int{2, 1, 0, -1, -3, -3, -800}
+	SelectionSort(array)
+	fmt.Println(array)
+}
